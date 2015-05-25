@@ -2,11 +2,10 @@
 
 var express = require('express');
 var app = express();
+var Entry = require('./models/entry_model');
 var entriesRouter = express.Router();
 
-var apiRoutes = require('../routes/api_routes');
-
-apiRoutes(entriesRouter);
+require('./routes/api_routes')(entriesRouter);
 
 app.use('/api', entriesRouter); // was apiRoutes
 

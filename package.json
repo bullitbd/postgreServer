@@ -1,12 +1,13 @@
 {
   "name": "persistServer",
   "version": "0.1.0",
-  "description": "simple rest server with mongo persistence",
+  "description": "simple rest server with postgres persistence",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "main": "server.js"
     "test": "grunt"
   },
   "author": "Bob Day",

@@ -1,8 +1,8 @@
 'use strict';
 
 var Sql = require('sequelize');
-
-var sql = new Sql('entries_dev', 'entries_dev', 'sea-d37', {
+var DB = require('./dbConfig');
+var sql = new Sql(DB.DATABASE, DB.USER, DB.PASS, {
     dialect: 'postgres'
 });
 
@@ -12,4 +12,5 @@ var Entry = module.exports = sql.define('Entry', {
     tag: Sql.STRING
 });
 
-Entry.sync();
+Entry.sync(); // {force: true}
+

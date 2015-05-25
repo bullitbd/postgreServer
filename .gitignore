@@ -1,4 +1,6 @@
 **/node_modules
 **/data
 **/db
-consolehistory
+**/res
+pg_log
+notes.txt
